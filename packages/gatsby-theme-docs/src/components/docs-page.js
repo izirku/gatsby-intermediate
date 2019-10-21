@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-// import React from 'react'
 import { MDXRenderer} from 'gatsby-plugin-mdx'
 import Layout from './layout'
+import TableOfContents from './table-of-contents'
 
 
 const DocsPage = ({ page }) => (
@@ -17,6 +17,11 @@ const DocsPage = ({ page }) => (
         mt: 2,
         pt: 2
       }}
-    >This page was updated {page.updated}</p>
+    >
+      This page was updated {page.updated}
+    </p>
+    <TableOfContents />
   </Layout>
 )
+
+export default DocsPage

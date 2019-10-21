@@ -5,6 +5,7 @@ import { Global } from '@emotion/core'
 
 const Layout = ({ children }) => (
   <Fragment>
+    <Global styles={{ body: { margin: 0 }}} />
     <header
       sx={{ bg: 'primary', color: 'background', fontFamily: 'heading', p: 3 }}
     >gatsby-theme-docs</header>

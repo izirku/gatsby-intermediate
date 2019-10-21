@@ -19,7 +19,7 @@ const Code = props => {
       language={language}
       theme={theme}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps })} => (
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={className}
           style={style}
@@ -33,7 +33,7 @@ const Code = props => {
             </div>
           ))}
         </pre>
-      )
+      )}
     </Highlight>
   )
 }

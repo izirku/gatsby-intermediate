@@ -15,7 +15,7 @@ exports.onPreBootstrap = ({store}, options) => {
   //  if directory doesn't exist, create it
   if (!fs.existsSync(dir)) {
     // create the dir
-    mkdirsp.sync(dir)
+    mkdirp.sync(dir)
   }
 }
 
@@ -52,7 +52,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId}, options ) => {
     id: createNodeId(`DocsPage-${node.id}`),
     title: node.frontmatter.title || parent.name,
     updated: parent.modifiedTime,
-    path: path.join('/', basePath, parent.relativeDirectory, pageName),
+    path: path.posix.join('/', basePath, parent.relativeDirectory, pageName),
     parent: node.id,
     internal: {
       type: 'DocsPage',
